@@ -1,5 +1,5 @@
 /* Name: Grim, Evan */
-/* EID: grimet */
+/* EID: N/A */
 /* Section: N/A */
 /* Assignment: 2 */
 /* Purpose: A program that performs useful calculations for someone traveling
