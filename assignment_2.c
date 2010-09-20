@@ -2,7 +2,8 @@
 /* EID: grimet */
 /* Section: N/A */
 /* Assignment: 2 */
-/* Purpose: A program that performs useful calculations for someone travelling to South Africa */
+/* Purpose: A program that performs useful calculations for someone traveling
+ *          to South Africa */
 
 #include <stdio.h>
 
