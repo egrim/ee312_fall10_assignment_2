@@ -56,7 +56,8 @@ int main()
 		float usd, zar;
 
 		// Temperature variable(s)
-		float fahrenheit, celsius;
+		float celsius;
+		int fahrenheit;
 
 		// Volume variable(s)
 		float liters, ounces;
@@ -184,7 +185,7 @@ int main()
 			case 5: // Temperature: F -> C
 				/* Prompt for input */
 				printf("Enter a US temperature to be converted (in  Fahrenheit): ");
-				scanf("%f", &fahrenheit);
+				scanf("%d", &fahrenheit);
 
 				/* Perform conversion */
 				celsius = F_TO_C_SCALAR * (fahrenheit - F_TO_C_OFFSET);
@@ -199,10 +200,12 @@ int main()
 				scanf("%f", &celsius);
 
 				/* Perform conversion */
-				fahrenheit = (C_TO_F_SCALAR * celsius) + F_TO_C_OFFSET;
 
-				/* Print output (let printf do the rounding) */
-				printf("The equivalent temperature in Fahrenheit (rounded) is: %.0f\n", fahrenheit);
+				// Convert C to F (add .5 and truncate to round)
+				fahrenheit = (int)((C_TO_F_SCALAR * celsius) + F_TO_C_OFFSET + .5);
+
+				/* Print output */
+				printf("The equivalent temperature in Fahrenheit (rounded) is: %d\n", fahrenheit);
 				break;
 
 			case 7: // Volume: L -> gal/fl.oz
@@ -215,12 +218,12 @@ int main()
 				// Convert L to fluid ounces
 				ounces = liters * OZ_PER_L;
 
-				// Round to 3 digits by:
+				// Round to 3 digit precision by:
 				//	* mult by 1000
 				//  * add .5
 				//  * truncate
-				//  * dived by 1000
-				ounces = ((int)(ounces * 1000 + .5))/1000;
+				//  * divide by 1000.0 (ensures floating point division)
+				ounces = ((int)(ounces * 1000 + .5))/1000.0;
 
 				// Pull out number of gallons and adjust value of ounces
 				gallons = ((int) ounces) / OZ_PER_GALLON_INT;
@@ -228,7 +231,7 @@ int main()
 
 
 				/* Print output */
-				printf("The equivalent volume in gallons and fluid ounces is: %d %f\n", gallons, ounces);
+				printf("The equivalent volume in gallons and fluid ounces is: %d %.3f\n", gallons, ounces);
 				break;
 
 			case 8: // Volume: gal/fl.oz -> L
