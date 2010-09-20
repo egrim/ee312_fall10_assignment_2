@@ -20,6 +20,7 @@ Program Code:
  * CAPS used for constants
  * Specified header at top of file
  * Uses comments (not strictly enforced for this assignment)
+ * Style (no point deductions for this assignment, only feedback)
 
 Conversion Requirements (15 points)
 -----------------------------------
