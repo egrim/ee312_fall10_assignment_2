@@ -3,28 +3,29 @@ Assignment 2
 Assignment 2 will be graded using the following criteria:
 
 General Requirements (5 points)
--------------------------------
+===============================
 
-General requirements account for 5 points.  Each requirement not met will result in the deduction of one point.
+General requirements account for 5 points.  Each requirement not met will result in the deduction of half a point.
 
-Program Output:
- * Appropriate prompts
- * Allows as many conversions as user desires
- * Menu presented before each conversion
- * Appropriate output (including units for the converted value)
- * User can quit program
-
-Program Code:
+Program Code
  * Specified header at top of file
  * CAPS used for constants
- * Conversion rates specified using symbolic constants
+ * Use symbolic names for conversion constants
  * All input via scanf
  * Appropriately named variables
  * Uses comments (not strictly enforced for this assignment)
  * Style (no point deductions for this assignment, only feedback)
 
+Program Output
+ * Appropriate prompts
+ * Control flow performs the requested conversion (and only the requested conversion), and allows as many conversions per execution as desired 
+ * Allows as many conversions as user desires
+ * Menu presented before each conversion
+ * Appropriate output (including units for the converted value)
+ * User can quit program
+
 Conversion Requirements (15 points)
------------------------------------
+===================================
 
 The five conversion types (time, money, temperature, volume, and distance) are each worth up to 3 points:
  * One point for matching the specified output format (e.g.: round to 2 decimal points, whole number, etc.).
@@ -32,7 +33,7 @@ The five conversion types (time, money, temperature, volume, and distance) are e
  * One point for correctly performing conversions the Corner Test Cases (see below).  If a given conversion type does not have any Corner Test Cases listed below, then the Basic Test Cases will be worth 2 points
 
 Test Cases
-----------
+==========
 
 The following test cases will be used to test your solution's conversion correctness.  The test cases are split into two groups: Basic Test Cases and Corner Test Cases.  Basic Test Cases test simple conversion, whereas the Corner Test Cases represent trickier situations that arise (often due to rounding).
 
@@ -51,8 +52,8 @@ Basic:
 16 20 -> 23 20
 
 Corner:
-17 40 -> 00 40 (next day)
-23 59 -> 06 59 (next day)
+17 40 -> 00 40 (the day after)
+23 59 -> 06 59 (the day after)
 
 SAST -> CDT (2)
 -----------
@@ -61,8 +62,8 @@ Basic:
 23 20 -> 16 20
 
 Corner:
-00 40 -> 17 40 (previous day)
-06 59 -> 23 59 (previous day)
+00 40 -> 17 40 (the day before)
+06 59 -> 23 59 (the day before)
 
 
 USD -> ZAR (3)
@@ -89,7 +90,7 @@ Corner:
 1.82 -> 00 25		// Cents rounded up
 729.86 -> 100 00	// Cents rounded up and made additional dollar
 
-F -> C (5)
+F -> C (5) [no rounding required]
 ------
 Basic:
 0 -> -17.78
@@ -108,7 +109,7 @@ Corner:
 -17.4 -> 1		// Whole degree F rounded up
 204.44 -> 400		// Whole degree F rounded up
 
-L -> Gal/oz (7)
+L -> Gal/oz (7) [round oz to 3 decimal places]
 -----------
 Basic:
 1 -> 0 33.814
@@ -118,7 +119,7 @@ Corner:
 25.0 -> 6 77.351	// ounces rounded up
 64.352 -> 17 0.000	// ounces rounded up and made another gallon
 
-Gal/oz -> L (8)
+Gal/oz -> L (8) [no rounding required]
 -----------
 Basic:
 0 33.8140227 -> 1.000
@@ -126,14 +127,14 @@ Basic:
 17 0 -> 64.352		
 26 53.402 -> 100.000
 
-km -> miles (9)
+km -> miles (9) [no rounding required]
 -----------
 Basic:
 1.0 -> .6213712
 5 -> 3.107
 1.609344 -> 1.000
 
-miles -> km (10)
+miles -> km (10) [no rounding required]
 -----------
 Basic:
 .6213712 -> 1.000
