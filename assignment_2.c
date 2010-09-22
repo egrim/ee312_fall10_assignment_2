@@ -11,6 +11,7 @@
 #define FALSE 0
 
 #define CDT_TO_SAST_OFFSET 7
+#define HOURS_PER_DAY 24
 
 #define USD_PER_ZAR 0.137011
 #define ZAR_PER_USD 7.29869
@@ -99,9 +100,9 @@ int main()
 				hour_output = hour_input + CDT_TO_SAST_OFFSET;
 
 				// Correct hour if rolled over to next day
-				if (hour_output > 23)
+				if (hour_output >= HOURS_PER_DAY)
 				{
-					hour_output -= 24;
+					hour_output = hour_output - HOURS_PER_DAY;
 					different_day = TRUE;
 				}
 				else
@@ -131,7 +132,7 @@ int main()
 				// Correct hour if rolled back to next day
 				if (hour_output < 0)
 				{
-					hour_output += 24;
+					hour_output = hour_output + HOURS_PER_DAY;
 					different_day = TRUE;
 				}
 				else
@@ -223,7 +224,7 @@ int main()
 				//	* mult by 1000
 				//  * add .5
 				//  * truncate
-				//  * divide by 1000.0 (ensures floating point division)
+				//  * divide by 1000.0 (float ensures non-integer division)
 				ounces = ((int)(ounces * 1000 + .5))/1000.0;
 
 				// Pull out number of gallons and adjust value of ounces
