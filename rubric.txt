@@ -2,28 +2,6 @@ Assignment 2
 
 Assignment 2 will be graded using the following criteria:
 
-General Requirements (5 points)
-===============================
-
-General requirements account for 5 points.  Each requirement not met will result in the deduction of half a point.
-
-Program Code
- * Specified header at top of file
- * CAPS used for constants
- * Use symbolic names for conversion constants
- * All input via scanf
- * Appropriately named variables
- * Uses comments (not strictly enforced for this assignment)
- * Style (no point deductions for this assignment, only feedback)
-
-Program Output
- * Appropriate prompts
- * Control flow performs the requested conversion (and only the requested conversion), and allows as many conversions per execution as desired 
- * Allows as many conversions as user desires
- * Menu presented before each conversion
- * Appropriate output (including units for the converted value)
- * User can quit program
-
 Conversion Requirements (15 points)
 ===================================
 
@@ -39,7 +17,7 @@ The following test cases will be used to test your solution's conversion correct
 
 Key: The test cases used for grading are provided below with the following format:
 
-Convertion Type
+Conversion Type
 ---------------
 input -> expected output	// comment on test case
 
@@ -140,3 +118,25 @@ Basic:
 .6213712 -> 1.000
 3.107 -> 5.000
 1.0 -> 1.609344
+
+General Requirements (5 points)
+===============================
+
+General requirements account for 5 points.  Each requirement not met will result in the deduction of one point.
+
+Program Output:
+ * Appropriate prompts
+ * Allows as many conversions as user desires
+ * Menu presented before each conversion
+ * Appropriate output (including units for the converted value)
+ * User can quit program
+
+Program Code:
+ * Specified header at top of file
+ * CAPS used for constants
+ * Conversion rates specified using symbolic constants
+ * All input via scanf
+ * Appropriately named variables
+ * Uses comments (not strictly enforced for this assignment)
+ * Style (no point deductions for this assignment, only feedback)
+
