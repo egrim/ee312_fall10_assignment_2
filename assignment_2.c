@@ -1,8 +1,8 @@
-/* Name: Grim, Evan */
-/* EID: N/A */
-/* Section: N/A */
-/* Assignment: 2 */
-/* Purpose: A program that performs useful calculations for someone traveling
+/* Name: Grim, Evan
+ * EID: N/A
+ * Section: N/A
+ * Assignment: 2
+ * Purpose: A program that performs useful calculations for someone traveling
  *          to South Africa */
 
 #include <stdio.h>
@@ -220,11 +220,11 @@ int main()
 				// Convert L to fluid ounces
 				ounces = liters * OZ_PER_L;
 
-				// Round to 3 digit precision by:
-				//	* mult by 1000
-				//  * add .5
-				//  * truncate
-				//  * divide by 1000.0 (float ensures non-integer division)
+				/* Round to 3 digit precision by:
+					* mult by 1000
+					* add .5
+					* truncate
+					* divide by 1000.0 (float ensures non-integer division) */
 				ounces = ((int)(ounces * 1000 + .5))/1000.0;
 
 				// Pull out number of gallons and adjust value of ounces
