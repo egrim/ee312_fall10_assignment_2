@@ -9,8 +9,8 @@ General requirements account for 5 points.  Each requirement not met will result
 
 Program Output:
  * Appropriate prompts
- * Allows as many conversions as user desires
- * Menu presented before each conversion
+ * Program allows multiple conversions and presents menu before each conversion
+ * Program performs requested action from the menu
  * Appropriate output (including units for the converted value)
  * User can quit program
 
