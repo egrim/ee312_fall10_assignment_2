@@ -2,6 +2,27 @@ Assignment 2
 
 Assignment 2 will be graded using the following criteria:
 
+General Requirements (5 points)
+===============================
+
+General requirements account for 5 points.  Each requirement not met will result in the deduction of one point.
+
+Program Output:
+ * Appropriate prompts
+ * Allows as many conversions as user desires
+ * Menu presented before each conversion
+ * Appropriate output (including units for the converted value)
+ * User can quit program
+
+Program Code:
+ * Specified header at top of file
+ * CAPS used for constants
+ * Conversion constants specified using symbolic names
+ * All input via scanf
+ * Appropriately named variables
+ * Uses comments (not strictly enforced for this assignment)
+ * Style (no point deductions for this assignment, only feedback)
+
 Conversion Requirements (15 points)
 ===================================
 
@@ -87,7 +108,7 @@ Corner:
 -17.4 -> 1		// Whole degree F rounded up
 204.44 -> 400		// Whole degree F rounded up
 
-L -> Gal/oz (7) [round oz to 3 decimal places]
+l -> gal/oz (7) [round oz to 3 decimal places]
 -----------
 Basic:
 1 -> 0 33.814
@@ -97,7 +118,7 @@ Corner:
 25.0 -> 6 77.351	// ounces rounded up
 64.352 -> 17 0.000	// ounces rounded up and made another gallon
 
-Gal/oz -> L (8) [no rounding required]
+gal/oz -> l (8) [no rounding required]
 -----------
 Basic:
 0 33.8140227 -> 1.000
@@ -118,25 +139,3 @@ Basic:
 .6213712 -> 1.000
 3.107 -> 5.000
 1.0 -> 1.609344
-
-General Requirements (5 points)
-===============================
-
-General requirements account for 5 points.  Each requirement not met will result in the deduction of one point.
-
-Program Output:
- * Appropriate prompts
- * Allows as many conversions as user desires
- * Menu presented before each conversion
- * Appropriate output (including units for the converted value)
- * User can quit program
-
-Program Code:
- * Specified header at top of file
- * CAPS used for constants
- * Conversion rates specified using symbolic constants
- * All input via scanf
- * Appropriately named variables
- * Uses comments (not strictly enforced for this assignment)
- * Style (no point deductions for this assignment, only feedback)
-
