@@ -1,0 +1,116 @@
+********************************************************************************
+<eid>
+------
+
+General
+=======
+
+Program Output
+ * 
+ 
+Program Code
+ * 
+
+Style Feedback
+==============
+ * 
+ 
+Conversions
+===========
+Time
+ * Output format incorrect (-1)
+    CDT: Required to be two whole numbers, one each for hour and minute
+    SAST: Required to be two whole numbers, one each for hour and minute
+ * Basic Test Case failed (-1)
+    CDT -> SAST
+    - Input: 00 00; Output: ; Correct Output: 07 00
+    - Input: 16 20; Output: ; Correct Output: 23 20
+    SAST -> CDT
+    - Input: 07 00; Output: ; Correct Output: 00 00
+    - Input: 23 20; Output: ; Correct Output: 16 20
+ * Corner Test Case failed (-1)
+    CDT -> SAST
+    - Input: 17 40; Output: ; Correct Output: 00 40 (the day after)
+    - Input: 23 59; Output: ; Correct Output: 06 59 (the day after)
+    SAST -> CDT
+    - Input: 00 40; Output: ; Correct Output: 17 40 (the day before)
+    - Input: 06 59; Output: ; Correct Output: 23 59 (the day before)
+ * Full credit
+    
+Money
+ * Output format incorrect (-1)
+    ZAR: Should be rounded to two decimal places
+ * Basic Test Case failed (-1)
+    USD -> ZAR
+    - Input: 00 25; Output: ; Correct Output: 1.82
+    - Input: 01 00; Output: ; Correct Output: 7.30
+    ZAR -> USD
+    - Input: 10.95; Output: ; Correct Output: 01 50
+    - Input: 41.97; Output: ; Correct Output: 05 75
+    - Input: 729.80; Output: ; Correct Output: 99 99
+ * Corner Test Case failed (-1)
+    USD -> ZAR
+    - Input: 01 50; Output: ; Correct Output: 10.95
+    - Input: 05 75; Output: ; Correct Output: 41.97
+    - Input: 99 99; Output: ; Correct Output: 729.80
+    - Input: 100 00; Output: ; Correct Output: 729.87
+    ZAR -> USD
+    - Input: 1; Output: ; Correct Output: 00 14
+    - Input: 1.82; Output: ; Correct Output: 00 25
+    - Input: 729.86; Output: ; Correct Output: 100 00
+ * Full credit
+
+Temperature
+ * Output format incorrect (-1)
+    F: should be rounded to the nearest whole number
+ * Basic Test Case failed (-1)
+    F -> C
+    - Input: 0; Output: ; Correct Output: -17.78
+    - Input: 32; Output: ; Correct Output: 0.00
+    - Input: 212; Output: ; Correct Output: 100.00
+    - Input: 400; Output: ; Correct Output: 204.44
+    C -> F
+    - Input: -17.78; Output: ; Correct Output: 0
+    - Input: 0; Output: ; Correct Output: 32
+    - Input: 100; Output: ; Correct Output: 212
+ * Corner Test Case failed (-1)
+    C -> F
+    - Input: -17.4; Output: ; Correct Output: 1
+    - Input: 204.44; Output: ; Correct Output: 400
+ * Full credit
+
+Volume
+ * Output format incorrect (-1)
+    g: should be a whole number
+    oz: should be rounded to 3 decimal places
+ * Basic Test Case failed (-1)
+    l -> gal/oz
+    - Input: 1; Output: ; Correct Output: 0 33.814
+    - Input: 100; Output: ; Correct Output: 26 53.402
+    gal/oz -> l
+    - Input: 0 33.8140227; Output: ; Correct Output: 1.000
+    - Input: 6 77.351; Output: ; Correct Output: 25.000
+    - Input: 17 0; Output: ; Correct Output: 64.352
+    - Input: 26 53.402; Output: ; Correct Output: 100.000
+ * Corner Test Case failed (-1)
+    l -> gal/oz
+    - Input: -17.4; Output: ; Correct Output: 1
+    - Input: 204.44; Output: ; Correct Output: 400
+ * Full credit
+
+Distance
+ * Basic Test Case failed (-1)
+    km -> miles
+    - Input: 1.0; Output: ; Correct Output: .6213712
+    - Input: 5; Output: ; Correct Output: 3.107
+    - Input: 1.609344; Output: ; Correct Output: 1.000
+    miles -> km
+    - Input: .6213712; Output: ; Correct Output: 1.000
+    - Input: 3.107; Output: ; Correct Output: 5.000
+    - Input: 1.0; Output: ; Correct Output: 1.609344
+ * Full credit
+
+Grade
+=====
+
+
