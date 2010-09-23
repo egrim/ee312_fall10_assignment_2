@@ -285,8 +285,5 @@ int main()
 		while (getchar() != '\n');
 	}
 
-	// Pause program before exiting by using getchar()
-	getchar();
-
 	return 0;
 }
