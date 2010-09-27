@@ -27,7 +27,7 @@ Conversion Requirements (15 points)
 ===================================
 
 The five conversion types (time, money, temperature, volume, and distance) are each worth up to 3 points:
- * One point for matching the specified output format (e.g.: round to 2 decimal points, whole number, etc.).
+ * One point for matching the specified input/output format (e.g.: round to 2 decimal points, whole number, etc.).
  * One point for correctly performing conversions in the Basic Test Cases (see below)
  * One point for correctly performing conversions the Corner Test Cases (see below).  If a given conversion type does not have any Corner Test Cases listed below, then the Basic Test Cases will be worth 2 points
 
